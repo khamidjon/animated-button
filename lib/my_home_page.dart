@@ -11,7 +11,6 @@ class MyHomePage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             _AnimatedButton(
-              size: 112,
               onTap: () {
                 print('Button 1 pressed');
               },
@@ -32,11 +31,9 @@ class MyHomePage extends StatelessWidget {
 class _AnimatedButton extends StatefulWidget {
   const _AnimatedButton({
     required this.onTap,
-    this.size = 130,
   });
 
   final VoidCallback onTap;
-  final double size;
 
   @override
   State<_AnimatedButton> createState() => _AnimatedButtonState();
@@ -80,8 +77,8 @@ class _AnimatedButtonState extends State<_AnimatedButton>
       child: Transform.scale(
         scale: _buttonScale,
         child: Container(
-          height: widget.size,
-          width: widget.size,
+          height: 96.0,
+          width: 96.0,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
