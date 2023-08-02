@@ -6,6 +6,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFFFFFF0),
       body: Center(
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -77,8 +78,8 @@ class _AnimatedButtonState extends State<_AnimatedButton>
       child: Transform.scale(
         scale: _buttonScale,
         child: Container(
-          height: 96.0,
-          width: 96.0,
+          height: 132.0,
+          width: 132.0,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
@@ -91,7 +92,13 @@ class _AnimatedButtonState extends State<_AnimatedButton>
             ],
           ),
           child: const Center(
-            child: Text('Press'),
+            child: Text(
+              'Press',
+              style: TextStyle(
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
       ),
